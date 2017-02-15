@@ -14,8 +14,8 @@ public class FloorPermission {
     private int userId;
     @Column(name = "permission_type")
     private PermissionType permissionType;
-    @Column(name = "floor_no")
-    private int floorNo;
+    @Column(name = "house_no")
+    private int houseNo;
     @Column(name = "building_no")
     private String buildingNo;
 
@@ -35,12 +35,12 @@ public class FloorPermission {
         this.permissionType = permissionType;
     }
 
-    public int getFloorNo() {
-        return floorNo;
+    public int getHouseNo() {
+        return houseNo;
     }
 
-    public void setFloorNo(int floorNo) {
-        this.floorNo = floorNo;
+    public void setHouseNo(int houseNo) {
+        this.houseNo = houseNo;
     }
 
     public String getBuildingNo() {
