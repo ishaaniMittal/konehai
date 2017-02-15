@@ -21,15 +21,15 @@ public class OneTimeAccess {
     private int userId;
     @Column(name = "access_code")
     private int passcode;
-    @Column(name = "expiry_time")
-    private Timestamp expiryTime;
+    @Column(name = "generation_time")
+    private Timestamp generationTime;
 
-    public Timestamp getExpiryTime() {
-        return expiryTime;
+    public Timestamp getGenerationTime() {
+        return generationTime;
     }
 
-    public void setExpiryTime(Timestamp expiryTime) {
-        this.expiryTime = expiryTime;
+    public void setGenerationTime(Timestamp generationTime) {
+        this.generationTime = generationTime;
     }
 
     public int getId() {

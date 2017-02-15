@@ -17,7 +17,7 @@ public class RegistrationController {
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ResponseBody
-    public String addCity(@RequestBody User user) {
+    public String registerNewUser(@RequestBody User user) {
         return registrationService.registerNewUser(user);
     }
 
