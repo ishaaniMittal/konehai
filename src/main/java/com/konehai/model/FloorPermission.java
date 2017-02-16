@@ -2,6 +2,7 @@ package com.konehai.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "floor_permission")
 public class FloorPermission {
+    @Id
     @Column(name = "user_id")
     private int userId;
     @Column(name = "permission_type")
