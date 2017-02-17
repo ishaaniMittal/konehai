@@ -13,6 +13,6 @@ import java.util.List;
  */
 @Transactional
 public interface FloorPermissionDao extends CrudRepository<FloorPermission,Integer> {
-    @Query("SELECT fp FROM FloorPermission fp WHERE fp.permissionType in ('ALLOW', 'SELF'))")
-    public List<FloorPermission> findFloorsPermitted(@Param("user_id") int userId);
+    @Query("SELECT fp FROM FloorPermission fp WHERE fp.userId = ?1 AND fp.permissionType in ('ALLOW','SELF'))")
+    public List<FloorPermission> findFloorsPermitted(int userId);
 }

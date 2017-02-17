@@ -1,9 +1,8 @@
 package com.konehai.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 
 /**
  * Created by HP on 15-02-2017.
@@ -12,12 +11,16 @@ import javax.persistence.Table;
 @Table(name = "floor_permission")
 public class FloorPermission {
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    @Column(name = "id")
+    private int id;
     @Column(name = "user_id")
     private int userId;
     @Column(name = "permission_type")
-    private PermissionType permissionType;
+    private String permissionType;
     @Column(name = "house_no")
-    private int houseNo;
+    private String houseNo;
     @Column(name = "building_no")
     private String buildingNo;
 
@@ -29,19 +32,19 @@ public class FloorPermission {
         this.userId = userId;
     }
 
-    public PermissionType getPermissionType() {
+    public String getPermissionType() {
         return permissionType;
     }
 
-    public void setPermissionType(PermissionType permissionType) {
+    public void setPermissionType(String permissionType) {
         this.permissionType = permissionType;
     }
 
-    public int getHouseNo() {
+    public String getHouseNo() {
         return houseNo;
     }
 
-    public void setHouseNo(int houseNo) {
+    public void setHouseNo(String houseNo) {
         this.houseNo = houseNo;
     }
 

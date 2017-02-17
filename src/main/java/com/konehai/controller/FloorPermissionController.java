@@ -17,12 +17,11 @@ public class FloorPermissionController {
     @Autowired
     private FloorPermissionService floorPermissionService;
 
-    @RequestMapping(value = "/user/{userId}", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/{userId}", method = RequestMethod.GET)
     @ResponseBody
     public List<FloorPermission> getFloorsPermitted(@PathVariable int userId) {
         return floorPermissionService.getFloorsPermitted(userId);
     }
-
 
     @RequestMapping(value = "/invite", method = RequestMethod.POST)
     @ResponseBody
@@ -35,5 +34,4 @@ public class FloorPermissionController {
     public void requestFloorAccess(@RequestBody FloorPermission floorPermission){
         floorPermissionService.requestFloorAccess(floorPermission);
     }
-    //requestFloorPermss
 }

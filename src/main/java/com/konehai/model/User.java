@@ -21,6 +21,8 @@ public class User implements Serializable{
     private String name;
     @Column(name="user_age")
     private int age;
+    @Column(name = "user_societyCode")
+    private String societyCode;
     @Column(name="user_houseNo")
     private String houseNo;
     @Column(name="user_buildingNo")
@@ -94,5 +96,13 @@ public class User implements Serializable{
 
     public void setResidentType(ResidentType residentType) {
         this.residentType = residentType;
+    }
+
+    public String getSocietyCode() {
+        return societyCode;
+    }
+
+    public void setSocietyCode(String societyCode) {
+        this.societyCode = societyCode;
     }
 }

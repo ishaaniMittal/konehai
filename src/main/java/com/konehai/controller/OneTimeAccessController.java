@@ -18,7 +18,7 @@ public class OneTimeAccessController {
     @Autowired
     private OneTimeAccessService oneTimeAccessService;
 
-    @RequestMapping(value = "/user/{userId}", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/{userId}", method = RequestMethod.GET)
     @ResponseBody
     public List<OneTimeAccess> getActiveCodes(@PathVariable int userId) {
         return oneTimeAccessService.getActiveCodes(userId);

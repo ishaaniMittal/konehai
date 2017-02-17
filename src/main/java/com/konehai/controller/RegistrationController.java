@@ -20,6 +20,4 @@ public class RegistrationController {
     public String registerNewUser(@RequestBody User user) {
         return registrationService.registerNewUser(user);
     }
-
-
 }
