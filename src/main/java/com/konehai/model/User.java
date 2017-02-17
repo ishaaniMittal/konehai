@@ -32,7 +32,7 @@ public class User implements Serializable{
     @Column(name="user_gender")
     private String gender;
     @Column(name="user_resident_type")
-    private ResidentType residentType;
+    private String residentType;
 
     public int getId() {
         return id;
@@ -90,11 +90,11 @@ public class User implements Serializable{
         this.gender = gender;
     }
 
-    public ResidentType getResidentType() {
+    public String getResidentType() {
         return residentType;
     }
 
-    public void setResidentType(ResidentType residentType) {
+    public void setResidentType(String residentType) {
         this.residentType = residentType;
     }
 

@@ -29,10 +29,6 @@ public class FloorPermission {
     private String toHouseNo;
     @Column(name = "permission_type")
     private String permissionType;
-    @Column(name = "house_no")
-    private String houseNo;
-    @Column(name = "building_no")
-    private String buildingNo;
 
     public String getFromBuildingNo() {
         return fromBuildingNo;
@@ -72,22 +68,6 @@ public class FloorPermission {
 
     public void setPermissionType(String permissionType) {
         this.permissionType = permissionType;
-    }
-
-    public String getHouseNo() {
-        return houseNo;
-    }
-
-    public void setHouseNo(String houseNo) {
-        this.houseNo = houseNo;
-    }
-
-    public String getBuildingNo() {
-        return buildingNo;
-    }
-
-    public void setBuildingNo(String buildingNo) {
-        this.buildingNo = buildingNo;
     }
 
     public int getId() {

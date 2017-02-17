@@ -3,7 +3,7 @@ package com.konehai.service;
 import com.konehai.dao.FloorPermissionDao;
 import com.konehai.dao.UserDao;
 import com.konehai.model.FloorPermission;
-import com.konehai.model.PermissionType;
+import com.konehai.model.AccessType;
 import com.konehai.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,9 +25,9 @@ public class UserService {
 
         FloorPermission floorPermission = new FloorPermission();
         floorPermission.setFromUserId(user.getId());
-        floorPermission.setBuildingNo(user.getBuildingNo());
-        floorPermission.setHouseNo(user.getHouseNo());
-        floorPermission.setPermissionType(PermissionType.SELF.name());
+        floorPermission.setFromBuildingNo(user.getBuildingNo());
+        floorPermission.setFromHouseNo(user.getHouseNo());
+        floorPermission.setPermissionType(AccessType.SELF.name());
 
         floorPermissionDao.save(floorPermission);
 
