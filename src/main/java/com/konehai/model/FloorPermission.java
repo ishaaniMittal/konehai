@@ -19,12 +19,52 @@ public class FloorPermission {
     private int fromUserId;
     @Column(name = "to_user_id")
     private int toUserId;
+    @Column(name = "from_building_no")
+    private String fromBuildingNo;
+    @Column(name = "to_building_no")
+    private String toBuildingNo;
+    @Column(name = "from_house_no")
+    private String fromHouseNo;
+    @Column(name = "to_house_no")
+    private String toHouseNo;
     @Column(name = "permission_type")
     private String permissionType;
     @Column(name = "house_no")
     private String houseNo;
     @Column(name = "building_no")
     private String buildingNo;
+
+    public String getFromBuildingNo() {
+        return fromBuildingNo;
+    }
+
+    public void setFromBuildingNo(String fromBuildingNo) {
+        this.fromBuildingNo = fromBuildingNo;
+    }
+
+    public String getToBuildingNo() {
+        return toBuildingNo;
+    }
+
+    public void setToBuildingNo(String toBuildingNo) {
+        this.toBuildingNo = toBuildingNo;
+    }
+
+    public String getFromHouseNo() {
+        return fromHouseNo;
+    }
+
+    public void setFromHouseNo(String fromHouseNo) {
+        this.fromHouseNo = fromHouseNo;
+    }
+
+    public String getToHouseNo() {
+        return toHouseNo;
+    }
+
+    public void setToHouseNo(String toHouseNo) {
+        this.toHouseNo = toHouseNo;
+    }
 
     public String getPermissionType() {
         return permissionType;
