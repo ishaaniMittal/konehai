@@ -25,13 +25,13 @@ public class FloorPermissionController {
 
     @RequestMapping(value = "/invite", method = RequestMethod.POST)
     @ResponseBody
-    public void inviteVisitor(@RequestBody FloorPermission floorPermission){
+    public void inviteVisitor(@RequestBody List<FloorPermission> floorPermission) {
         floorPermissionService.addFloorPermission(floorPermission);
     }
 
     @RequestMapping(value = "/requestaccess", method = RequestMethod.POST)
     @ResponseBody
-    public void requestFloorAccess(@RequestBody FloorPermission floorPermission){
+    public void requestFloorAccess(@RequestBody FloorPermission floorPermission) {
         floorPermissionService.requestFloorAccess(floorPermission);
     }
 }

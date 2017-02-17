@@ -20,11 +20,11 @@ public class FloorPermissionService {
         return floorPermissionDao.findFloorsPermitted(userId);
     }
 
-    public void addFloorPermission(FloorPermission floorPermission) {
+    public void addFloorPermission(List<FloorPermission> floorPermission) {
         floorPermissionDao.save(floorPermission);
     }
 
     public void requestFloorAccess(FloorPermission floorPermission) {
-
+        floorPermissionDao.save(floorPermission);
     }
 }
