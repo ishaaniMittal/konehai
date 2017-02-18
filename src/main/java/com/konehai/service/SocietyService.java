@@ -41,4 +41,5 @@ public class SocietyService {
     public List<BuildingNameResponse> getBuildingNames(String societyCode) {
         return societyDao.findBySocietyCode(societyCode);
     }
+
 }
