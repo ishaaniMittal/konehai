@@ -17,6 +17,10 @@ public class Society {
     private String societyCode;
     @Column(name = "society_name")
     private String societyName;
+    @Column(name = "building_name")
+    private String buildingName;
+    @Column(name = "house_name")
+    private String houseName;
 
     public String getSocietyCode() {
         return societyCode;
@@ -32,6 +36,22 @@ public class Society {
 
     public void setSocietyName(String societyName) {
         this.societyName = societyName;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    public void setBuildingName(String buildingName) {
+        this.buildingName = buildingName;
+    }
+
+    public String getHouseName() {
+        return houseName;
+    }
+
+    public void setHouseName(String houseName) {
+        this.houseName = houseName;
     }
 }
 
