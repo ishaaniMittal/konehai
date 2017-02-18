@@ -1,7 +1,6 @@
 package com.konehai.controller;
 
 import com.konehai.model.OneTimeAccess;
-import com.konehai.response.ActiveCodeRequest;
 import com.konehai.service.OneTimeAccessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

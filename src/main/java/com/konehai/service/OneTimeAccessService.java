@@ -2,7 +2,6 @@ package com.konehai.service;
 
 import com.konehai.dao.OneTimeAccessDao;
 import com.konehai.model.OneTimeAccess;
-import com.konehai.response.ActiveCodeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
