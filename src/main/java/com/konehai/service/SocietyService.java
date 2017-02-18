@@ -2,6 +2,8 @@ package com.konehai.service;
 
 import com.konehai.dao.SocietyDao;
 import com.konehai.model.Society;
+import com.konehai.response.BuildingNameResponse;
+import com.konehai.response.HouseNameResponse;
 import com.konehai.response.SocietyNameResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,5 +32,13 @@ public class SocietyService {
 
         return societyResponse;
 
+    }
+
+    public List<HouseNameResponse> getHouseNames(String buildingName, String societyCode) {
+        return societyDao.findBySocietyCodeAndBuildingName(societyCode, buildingName);
+    }
+
+    public List<BuildingNameResponse> getBuildingNames(String societyCode) {
+        return societyDao.findBySocietyCode(societyCode);
     }
 }
