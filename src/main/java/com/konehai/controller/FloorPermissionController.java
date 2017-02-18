@@ -34,4 +34,10 @@ public class FloorPermissionController {
     public void requestFloorAccess(@RequestBody FloorPermission floorPermission) {
         floorPermissionService.requestFloorAccess(floorPermission);
     }
+
+    @RequestMapping(value = "/allowrequest", method = RequestMethod.POST)
+    @ResponseBody
+    public void allowFloorAccessRequest(@RequestBody FloorPermission floorPermission){
+        floorPermissionService.allowRequestedFloorAccess(floorPermission);
+    }
 }

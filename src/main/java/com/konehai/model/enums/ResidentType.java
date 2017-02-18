@@ -1,4 +1,4 @@
-package com.konehai.model;
+package com.konehai.model.enums;
 
 /**
  * Created by imittal on 2/15/17.

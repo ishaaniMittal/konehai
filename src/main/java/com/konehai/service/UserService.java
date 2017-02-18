@@ -3,7 +3,7 @@ package com.konehai.service;
 import com.konehai.dao.FloorPermissionDao;
 import com.konehai.dao.UserDao;
 import com.konehai.model.FloorPermission;
-import com.konehai.model.AccessType;
+import com.konehai.model.enums.AccessType;
 import com.konehai.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,5 +36,9 @@ public class UserService {
 
     public List<User> getHouseResidents(String buildingNo, String houseNo) {
         return userDao.getHouseResidents(buildingNo, houseNo);
+    }
+
+    public List<User> getHouseGuests(int userId) {
+        return userDao.getHouseGuests(userId);
     }
 }

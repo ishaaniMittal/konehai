@@ -2,6 +2,7 @@ package com.konehai.service;
 
 import com.konehai.dao.FloorPermissionDao;
 import com.konehai.model.FloorPermission;
+import com.konehai.model.enums.AccessType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +27,20 @@ public class FloorPermissionService {
 
     public void requestFloorAccess(FloorPermission floorPermission) {
         floorPermissionDao.save(floorPermission);
+    }
+
+    public void allowRequestedFloorAccess(FloorPermission floorPermission) {
+        FloorPermission newFloorPermitted = new FloorPermission();
+        newFloorPermitted.setFromUserId(floorPermission.getToUserId());
+        newFloorPermitted.setFromBuildingNo(floorPermission.getToBuildingNo());
+        newFloorPermitted.setFromHouseNo(floorPermission.getToHouseNo());
+
+        newFloorPermitted.setToUserId(floorPermission.getFromUserId());
+        newFloorPermitted.setToBuildingNo(floorPermission.getFromBuildingNo());
+        newFloorPermitted.setToHouseNo(floorPermission.getFromHouseNo());
+        newFloorPermitted.setPermissionType(AccessType.ALLOWED.name());
+
+        floorPermissionDao.save(newFloorPermitted);
+        floorPermissionDao.delete(floorPermission);
     }
 }

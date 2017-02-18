@@ -15,4 +15,8 @@ public interface UserDao extends CrudRepository<User, Integer> {
 
     @Query("SELECT u FROM User u WHERE u.buildingNo = ?1 AND u.houseNo = ?2)")
     List<User> getHouseResidents(String buildingNo, String houseNo);
+
+    @Query("SELECT u FROM User u WHERE u.id = (SELECT fp.toUserId FROM com.konehai.model.FloorPermission fp WHERE fp.fromUserId = ?1 AND fp.permissionType='INVITE'||'ALLOWED')")
+    List<User> getHouseGuests(int userId);
+
 }

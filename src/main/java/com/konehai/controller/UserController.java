@@ -27,4 +27,9 @@ public class UserController {
     public List<User> getResidentsOfAHouse(@RequestParam("buildingNo") String buildingNo, @RequestParam("houseNo") String houseNo) {
         return userService.getHouseResidents(buildingNo, houseNo);
     }
+
+    @RequestMapping(value = "/guests", method = RequestMethod.GET)
+    public List<User> getGuestsOfAUser(@RequestParam("userId") int userId){
+        return userService.getHouseGuests(userId);
+    }
 }
