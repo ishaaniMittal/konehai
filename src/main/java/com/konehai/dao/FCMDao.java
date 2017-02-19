@@ -9,4 +9,5 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 public interface FCMDao extends CrudRepository<FCMRequest, Integer> {
+    FCMRequest findByUserId(String userId);
 }

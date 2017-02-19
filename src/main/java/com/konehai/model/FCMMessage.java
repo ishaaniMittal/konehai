@@ -7,6 +7,12 @@ public class FCMMessage {
     private String notificationTitle;
     private String notificationBody;
 
+
+    public FCMMessage(String notificationBody, String notificationTitle) {
+        this.notificationBody = notificationBody;
+        this.notificationTitle = notificationTitle;
+    }
+
     public String getNotificationTitle() {
         return notificationTitle;
     }
